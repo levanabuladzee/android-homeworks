@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Levan Abuladze - Homework 1</string>
+    <string name="title">My Awesome Timer</string>
+    <string name="username">Username</string>
+    <string name="start">Start</string>
+    <string name="pause">Pause</string>
+    <string name="reset">Reset</string>
+    <string name="share">Share</string>
+    <string name="share_subject">My Current Timestamp</string>
+    <string name="share_using">Share Timestamp Using</string>
+</resources>
