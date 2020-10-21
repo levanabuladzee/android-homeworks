@@ -3,7 +3,6 @@ package abuladze.levan.homework3
 import abuladze.levan.homework3.api.MovieController
 import abuladze.levan.homework3.model.ItemMovie
 import abuladze.levan.homework3.model.Movie
-import android.content.Context
 import android.content.Intent
 import android.content.Intent.ACTION_VIEW
 import android.net.Uri
@@ -20,13 +19,10 @@ import retrofit2.Response
 class MainActivity : AppCompatActivity() {
     private val movieController = MovieController()
     private val movies = arrayListOf<ItemMovie>()
-    private lateinit var mContext: Context
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        mContext = this
 
         val adapter = MovieAdapter(object : MovieAdapter.OnItemClickListener {
             override fun onItemClick(item: ItemMovie) {
