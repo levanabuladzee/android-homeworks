@@ -91,7 +91,7 @@ class CoinGecko(
     private fun saveSyncTime() {
         if (editor != null) {
             val c = Calendar.getInstance()
-            editor.putString("LAST_SYNC", "${c.get(Calendar.HOUR_OF_DAY)}:${c.get(Calendar.MINUTE)}:${c.get(Calendar.SECOND)}")
+            editor.putString("LAST_SYNC", "${convertTime(c.get(Calendar.HOUR_OF_DAY))}:${convertTime(c.get(Calendar.MINUTE))}:${convertTime(c.get(Calendar.SECOND))}")
             editor.apply()
         }
     }
@@ -101,9 +101,17 @@ class CoinGecko(
         favCoinsList: List<Coins>
     ) {
         if (sharedPreferences != null) {
-            model.sendSync("Last synced ${sharedPreferences.getString("LAST_SYNC", "?")?.format("%02d:%02d:%02d")}")
+            model.sendSync("Last synced ${sharedPreferences.getString("LAST_SYNC", "?")}")
             model.sendAllCoinsList(allCoinsList)
             model.sendFavCoinsList(favCoinsList)
+        }
+    }
+
+    private fun convertTime(input: Int): String {
+        return if (input >= 10) {
+            input.toString()
+        } else {
+            "0$input"
         }
     }
 }

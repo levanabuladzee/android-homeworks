@@ -78,5 +78,4 @@ class MainActivity : AppCompatActivity() {
         coinGeckoClient = CoinGecko(this, sharedPreferences, model, CoinsDatabase.getDatabase(this).coinsDao())
         coinGeckoClient.fetchCoinsList()
     }
-
 }
