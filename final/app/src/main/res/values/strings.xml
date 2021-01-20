@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">CryptoCoin</string>
+
+    <string name="all_coins">All Coins</string>
+    <string name="favourites">Favourites</string>
+    <string name="settings">Settings</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="favourite_image_view">Favourite Image View</string>
+    <string name="coins_item_image_view">Coins Item Image View</string>
+    <string name="last_synced">Last synced </string>
+</resources>
